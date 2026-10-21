@@ -1,0 +1,24 @@
+import java.util.*;
+public class frequency {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+    
+        boolean[] v = new boolean[s.length()];
+        for(int i=0; i<s.length(); i++){
+            if(v[i]){
+                 continue;
+            }
+            int count=0;
+            for(int j=i+1; j<s.length(); j++){
+                if(s.charAt(i)==s.charAt(j)){
+                        count++;
+                        v[j] = true;
+                }
+            }
+        
+        System.out.println(s.charAt(i)+"  = "+count);
+        }
+    }
+
+}
